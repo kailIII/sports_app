@@ -3,7 +3,9 @@ module.exports = function(sequelize, DataTypes) {
   var Player = sequelize.define('Player', {
     firstName: DataTypes.STRING,
     lastName: DataTypes.STRING,
-    position: DataTypes.STRING
+    position: DataTypes.STRING,
+    number: DataTypes.INTEGER,
+    team: DataTypes.STRING
   }, {
     classMethods: {
       associate: function(models) {

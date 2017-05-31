@@ -60,6 +60,17 @@ app.post('/create-user', function(request, response){
     response.json({message: "fail", error: error})
   })
 })
+//
+// app.post('/create-player', function(request, response){
+//   Player.create(request.body.player).then(function(player){
+//     response.status(200)
+//     response.json({message: "success", player: player})
+//   }).catch(function(error){
+//     console.log('fail');
+//     response.status(400)
+//     response.json({message: "fail", error: error})
+//   })
+// })
 
 
 app.listen(process.env.PORT || 4000, function () {

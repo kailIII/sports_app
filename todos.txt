@@ -1,0 +1,5 @@
+
+stuff to do:
+
+
+only can create player or team if signed in (redirect from the create player/team pages if not signed in)

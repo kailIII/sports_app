@@ -1,0 +1,36 @@
+
+http://docs.sequelizejs.com/manual/tutorial/migrations.html
+
+https://github.com/sequelize/cli/issues/133
+
+
+addColumn(tableNameOrOptions, attributeName, dataTypeOrOptions, options)
+
+This method allows adding columns to an existing table. The data type can be simple or complex.
+
+queryInterface.addColumn(
+  'nameOfAnExistingTable',
+  'nameOfTheNewAttribute',
+  Sequelize.STRING
+)
+
+// or
+
+queryInterface.addColumn(
+  'nameOfAnExistingTable',
+  'nameOfTheNewAttribute',
+  {
+    type: Sequelize.STRING,
+    allowNull: false
+  }
+)
+
+// or with an explicit schema:
+
+queryInterface.addColumn({
+    tableName: 'Person',
+    schema: 'public'
+  },
+  'signature',
+  Sequelize.STRING
+)

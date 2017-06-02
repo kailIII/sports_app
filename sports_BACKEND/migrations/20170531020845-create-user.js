@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
   up: function(queryInterface, Sequelize) {
-    return queryInterface.createTable('Players', {
+    return queryInterface.createTable('Users', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -14,11 +14,20 @@ module.exports = {
       lastName: {
         type: Sequelize.STRING
       },
-      position: {
+      email: {
         type: Sequelize.STRING
       },
-      number: {
-        type: Sequelize.INTEGER
+      encryptedPassword: {
+        type: Sequelize.STRING
+      },
+      authToken: {
+        type: Sequelize.STRING
+      },
+      authTokenExpiration: {
+        type: Sequelize.DATE
+      },
+      salt: {
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,
@@ -31,13 +40,6 @@ module.exports = {
     });
   },
   down: function(queryInterface, Sequelize) {
-    return queryInterface.dropTable('Players');
+    return queryInterface.dropTable('Users');
   }
 };
-
-//
-// firstName: DataTypes.STRING,
-// lastName: DataTypes.STRING,
-// position: DataTypes.STRING,
-// number: DataTypes.INTEGER,
-// team: DataTypes.STRING

@@ -72,8 +72,8 @@ app.post('/create-user', function(request, response){
 //   })
 // })
 
-
-app.listen(process.env.PORT || 4000, function () {
+// process.env.PORT || 4000
+app.listen(4000, function () {
  console.log('Todo Server listening on port 4000!');
 });
 

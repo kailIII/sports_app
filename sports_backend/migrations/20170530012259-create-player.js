@@ -34,3 +34,10 @@ module.exports = {
     return queryInterface.dropTable('Players');
   }
 };
+
+//
+// firstName: DataTypes.STRING,
+// lastName: DataTypes.STRING,
+// position: DataTypes.STRING,
+// number: DataTypes.INTEGER,
+// team: DataTypes.STRING
